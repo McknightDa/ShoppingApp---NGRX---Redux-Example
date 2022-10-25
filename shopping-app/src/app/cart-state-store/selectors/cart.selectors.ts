@@ -17,7 +17,7 @@ export const selectTotalPrice = createSelector(
     createFeatureSelector('cartEntries'),
     (state: Product[])=>{
         let totalPrice = 0;
-        state.forEach(p => totalPrice = totalPrice + p.price)
+        state.forEach(p => totalPrice = totalPrice + ~~p.price)
         return totalPrice
     }
 )
