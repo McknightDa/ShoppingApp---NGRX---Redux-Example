@@ -3,11 +3,11 @@ import { ProductsService } from 'src/app/services/products.service';
 import { select, Store } from '@ngrx/store';
 import { Product } from 'src/app/classes/product';
 import { addProduct } from 'src/app/cart-state-store/actions/cart.actions';
-import { addFav } from 'src/app/cart-state-store/actions/shirts.actions';
+import {  addFav } from 'src/app/cart-state-store/actions/shirts.actions';
 import { Observable } from 'rxjs';
 import {allShirtProducts} from 'src/app/cart-state-store/selectors/shirts.selectors'
 import {allFavProducts} from 'src/app/cart-state-store/selectors/favorites.selectors'
-import { getFavs } from 'src/app/cart-state-store/actions/favorites.actions';
+//import { addedFav, getFavs } from 'src/app/cart-state-store/actions/favorites.actions';
 //import { favsMap } from 'src/app/cart-state-store/selectors/favorites.selectors'
 
 @Component({
@@ -44,18 +44,17 @@ export class ShirtsComponent implements OnInit {
     let newData = {...data};
     this.store.dispatch(addFav(newData))
     console.log(newData,'fired')
+    
+    //this.checkFav(newData.firebaseId);
   }
 
   checkFav(id: any){
-    console.log(id)
-    return this.favoriteItems$.subscribe((val) =>{ 
-      if(val.findIndex((item: any) => item.firebaseId === id)){
-        return console.log(false)
-      }else{
-        return console.log(true)
-      }
+    const checkedArray: any = []
+     this.favoriteItems$.subscribe((val) => {
+     val.forEach((el: any) => checkedArray.push(el))
     })
-    
+    const check = checkedArray.some((e: any) => e.firebaseId === id)
+    return check
   }
 
   addToCart(product: Product){

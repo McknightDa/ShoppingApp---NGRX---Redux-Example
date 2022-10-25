@@ -2,8 +2,7 @@ import { Injectable } from "@angular/core";
 import { ProductsService } from "src/app/services/products.service";
 import { createEffect, Actions, ofType } from "@ngrx/effects";
 import { addFav, addFavSuccess } from "../actions/shirts.actions";
-
-
+import { Store } from "@ngrx/store";
 import { exhaustMap, map, tap, concatMap } from "rxjs";
 
 
@@ -28,9 +27,6 @@ export class addFavsEffect {
         )
     )
     )
-
-
-
     constructor(private actions$: Actions, private dataService: ProductsService ){}
 
 }

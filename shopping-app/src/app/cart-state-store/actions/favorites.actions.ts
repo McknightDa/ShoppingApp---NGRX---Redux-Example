@@ -6,3 +6,5 @@ export const getFavsSuccess = createAction(
     'Get Favs Success',
     props<{favs: Product}>()
 )
+
+// export const addedFav = createAction('Add Fav',props<Product>())
