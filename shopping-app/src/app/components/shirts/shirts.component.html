@@ -1,0 +1,26 @@
+<app-nav></app-nav>
+<!-- Display options for shirts -->
+<div class="shirtsContainer"> 
+    <div *ngFor="let shirt of (allShirt$ | async)">
+        
+        <div class="cardStyle">
+            <div class="card" style="width: 18rem;">
+                <img src={{shirt.image_url}} 
+                    class="card-img-top"
+                    width="290px"
+                    height="300px" 
+                    alt="shirts">
+                <div class="card-body">
+                    
+                  <h5 class="card-title">{{ shirt.name }}</h5>
+                  <p class="card-text">${{ shirt.price }}</p>
+                  <button [disabled]="checkFav(shirt.firebaseId)" class="btn btn-primary"(click)="addFavorite(shirt)" >Add Favorite Item</button>
+                  <button class="btn btn-primary"(click)="checkFav(shirt.firebaseId)" >Add Favorite Item</button>
+                  <button class="btn btn-primary"(click)="addToCart(shirt)">Add to Cart</button>
+
+                </div>
+              </div>
+        </div>
+    
+    </div>
+</div>

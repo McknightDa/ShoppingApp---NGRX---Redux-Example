@@ -1,0 +1,63 @@
+{
+  "Shirts" : {
+    "dsfdggfhf":{
+    "id" : 1,
+    "image_url" : "https://cdn.shopify.com/s/files/1/0264/0225/8995/products/USASMZ2006_A.jpg?v=1591293163",
+    "name" : "Jersey",
+    "price" : "80.00"
+  }, 
+  "cxvvbnft":{
+    "id" : 2,
+    "image_url" : "https://i1.adis.ws/i/easton/M10HOODIE_ATHLETICHEATHER_01/M10TECHFLEECEHOODIE-ATHLETICHEATHER?$large$",
+    "name" : "Hoodie",
+    "price" : "50.00"
+  }, 
+  "dsfghjlkyutnf":{
+    "id" : 3,
+    "image_url" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrbWLxw63leFHeHPwSY-Eyqhk1yYla2AkjVd55JPZIJsLqlWL6SdGwWOqMKqvEXhWa2r92urg&usqp=CAc",
+    "name" : "Long-Sleeve",
+    "price" : "30.00"
+  }, 
+  "hythbbvcgre":{
+    "id" : 4,
+    "image_url" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRhMTDsVj2pDUUDCFWe_gHluKmsXEU6W28cQ&usqp=CAU",
+    "name" : "T-Shirt",
+    "price" : "25.00"
+  } },
+
+  "Favorites": {
+    "gfdgsdfgfsd":{
+      "id" : 1,
+      "image_url" : "https://cdn.shopify.com/s/files/1/0264/0225/8995/products/USASMZ2006_A.jpg?v=1591293163",
+      "name" : "Jersey",
+      "price" : "80.00"
+    },
+    "vcxvxxvx":{
+      "id" : 2,
+      "image_url" : "https://i1.adis.ws/i/easton/M10HOODIE_ATHLETICHEATHER_01/M10TECHFLEECEHOODIE-ATHLETICHEATHER?$large$",
+      "name" : "Hoodie",
+      "price" : "50.00"
+    } 
+  
+  },
+
+  "Cart": {
+    "fhnfcvbn":{
+      "id" : 1,
+      "image_url" : "https://cdn.shopify.com/s/files/1/0264/0225/8995/products/USASMZ2006_A.jpg?v=1591293163",
+      "name" : "Jersey",
+      "price" : "80.00",
+      "quantity" : 2
+    },
+    "ggvcbtref":{
+      "id" : 2,
+      "image_url" : "https://i1.adis.ws/i/easton/M10HOODIE_ATHLETICHEATHER_01/M10TECHFLEECEHOODIE-ATHLETICHEATHER?$large$",
+      "name" : "Hoodie",
+      "price" : "50.00",
+      "quantity" : 3
+    } 
+  
+  }
+
+  
+}

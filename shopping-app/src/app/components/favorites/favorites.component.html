@@ -1,0 +1,32 @@
+<app-nav></app-nav>
+<!-- Display Options for All Favorites -->
+
+<!-- <div *ngIf="contentDisplayToggle === false; else displayContent">
+    <h1>No Favorites Have Been Added</h1>
+</div> -->
+
+
+<!-- <ng-template #displayContent> -->
+    <div class="shirtsContainer"> 
+        <div *ngFor="let fav of (allFav$ | async)">
+            
+            <div class="cardStyle">
+                <div class="card" style="width: 18rem;">
+                    <img src={{fav.image_url}} 
+                        class="card-img-top"
+                        width="290px"
+                        height="300px" 
+                        alt="shirts">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ fav.name }}</h5>
+                      <p class="card-text">${{ fav.price }}</p>
+                      <button  class="btn btn-primary">Add to Cart</button>
+                      <button  class="btn btn-danger" (click)="removeFav(fav.uuid)">Remove From Favorite</button>
+                      
+                    </div>
+                  </div>
+            </div>
+        
+        </div>
+    </div>
+<!-- </ng-template> -->

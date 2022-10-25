@@ -1,0 +1,53 @@
+<app-nav></app-nav>
+<div class="shirtsContainer"> 
+    <div *ngFor="let entry of (cartEntries$ | async )">
+        
+        <div class="cardStyle">
+            <div class="card" style="width: 18rem;">
+                <img src={{entry.product.image_url}} 
+                    class="card-img-top"
+                    width="290px"
+                    height="300px" 
+                    alt="shirts">
+                <div class="card-body">
+                  <h5 class="card-title">{{ entry.product.name }}</h5>
+                  <p class="card-text">${{ entry.product.price }}</p>
+                </div>
+                <p>Quantity: {{entry.count}}</p>
+              </div>
+              <button  class="btn btn-danger" (click)="more(entry)">MORE</button>
+              <button  class="btn btn-danger" (click)="less(entry)">LESS</button>
+        </div>
+    
+    </div>
+</div>
+
+
+<button  class="btn btn-danger" (click)="clearCart()"> Clear Cart </button>
+
+<!-- <app-nav></app-nav>
+<div class="shirtsContainer"> 
+    <div *ngFor="let entry of objectKeys(carEntries)">
+        
+        <div class="cardStyle">
+            <div class="card" style="width: 18rem;">
+                <img src={{carEntries[entry].image_url}} 
+                    class="card-img-top"
+                    width="290px"
+                    height="300px" 
+                    alt="shirts">
+                <div class="card-body">
+                  <h5 class="card-title">{{ carEntries[entry].name }}</h5>
+                  <p class="card-text">${{ carEntries[entry].price }}</p>
+                </div>
+                <p>Quantity: {{carEntries[entry].quantity}}</p>
+              </div>
+              <button  class="btn btn-danger" (click)="more(carEntries[entry])">MORE</button>
+              <button  class="btn btn-danger" (click)="less(carEntries[entry])">LESS</button>
+        </div>
+    
+    </div>
+</div>
+
+
+<button  class="btn btn-danger" (click)="clearCart()"> Clear Cart </button> -->
