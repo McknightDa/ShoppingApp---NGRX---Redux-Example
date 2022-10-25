@@ -10,5 +10,5 @@ export const getShirtSuccess = createAction(
 export const addFav = createAction('Add Fav', props<Product>())
 export const addFavSuccess = createAction(
     'Add Fav Success',
-    props<Product>()
+    props<any>()
 )

@@ -14,8 +14,7 @@
                     
                   <h5 class="card-title">{{ shirt.name }}</h5>
                   <p class="card-text">${{ shirt.price }}</p>
-                  <button [disabled]="checkFav(shirt.firebaseId)" class="btn btn-primary"(click)="addFavorite(shirt)" >Add Favorite Item</button>
-                  <button class="btn btn-primary"(click)="checkFav(shirt.firebaseId)" >Add Favorite Item</button>
+                  <button [disabled] = "favItems[shirt.firebaseId]"class="btn btn-primary"(click)="addFavorite(shirt)" >Add Favorite Item</button>
                   <button class="btn btn-primary"(click)="addToCart(shirt)">Add to Cart</button>
 
                 </div>

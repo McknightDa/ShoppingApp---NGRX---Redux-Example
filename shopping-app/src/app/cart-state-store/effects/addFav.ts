@@ -12,18 +12,11 @@ import { exhaustMap, map, tap, concatMap } from "rxjs";
 export class addFavsEffect {
 
     addFav$ = createEffect(() =>
-    // this.actions$.pipe(
-    //     ofType(addFav),
-    //     tap((fav) => console.log(fav, 'is this firing?')),
-    //     exhaustMap((data) => this.dataService.addFavorites(data).pipe(
-    //         map(favs => addFavSuccess(favs))
-    //     ))
-    // )
     this.actions$.pipe(
         ofType(addFav),
         concatMap((newItem) => 
         this.dataService.addFavorites(newItem).pipe(
-            map((newItem) => addFavSuccess(newItem))
+            map((uuid) => addFavSuccess({...newItem, uuid}))
         )
         )
     )

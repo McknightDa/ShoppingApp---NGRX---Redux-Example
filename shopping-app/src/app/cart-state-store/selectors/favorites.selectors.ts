@@ -13,11 +13,13 @@ export const allFavProducts = createSelector(
         return favArray
     }
 );
-// export const favsMap = createSelector(
-//     createFeatureSelector('favs'),
-//     (state: any) =>  Object.values(state.favs).reduce(
-//         (acc :{}, curr: any) => { 
-//             acc[curr.firebaseId]= curr;
-//          return acc;
-//         },{})
-// )
+export const favsMap = createSelector(
+    createFeatureSelector('favs'),
+    (state: any) =>  Object.values(state).reduce(
+        (acc :{}, curr: any) => { 
+            if(typeof curr === 'object'){
+                acc[curr.firebaseId]= curr;
+            }
+         return acc;
+        },{})
+)
