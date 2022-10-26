@@ -29,13 +29,13 @@ describe('ProductsService', () => {
     "id" : 1,
     "image_url" : "someURL1.jpg",
     "name" : "Jersey",
-    "price" : "80.00",
+    "price" : 80.00,
     "quantity": 3
   },{
     "id" : 2,
     "image_url" : "someURL2.jpg",
     "name" : "Hoodie",
-    "price" : "50.00",
+    "price" : 50.00,
     "quantity": 1
   }];
 
