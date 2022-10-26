@@ -57,8 +57,8 @@ export class ProductsService {
     return this.http.delete(url)
   }
 
-  getCart(): Observable<Cart>{
-    return this.http.get<any>(this.cartUrl)
+  getCart(): Observable<any>{
+    return this.http.get<Cart>(this.cartUrl)
   }
 
 
